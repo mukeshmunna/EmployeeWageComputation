@@ -10,6 +10,7 @@ namespace EmployeeWageComputation
             Console.WriteLine("Employee Wage Computation");
             EmployeeAttendance wage = new EmployeeAttendance();
             wage.CalculationEmpWage();
+            
         }
 
     }

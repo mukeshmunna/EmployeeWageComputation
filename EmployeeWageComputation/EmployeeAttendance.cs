@@ -33,7 +33,7 @@ namespace EmployeeWageComputation
                 empCheck = PART_DAY_HR;
             }
             totalEmpWage = WAGE_PER_HR * empHrs;
-            Console.WriteLine(totalEmpWage);
+            Console.WriteLine("total emp wages"+totalEmpWage);
         }
     }
 }
