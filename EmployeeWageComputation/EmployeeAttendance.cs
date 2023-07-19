@@ -10,10 +10,19 @@ namespace EmployeeWageComputation
     internal class EmployeeAttendance
 
     {
-        const int WAGE_PER_HR = 20, FULL_DAY_HR = 8, PART_DAY_HR = 4, IS_FULL_TIME = 0, IS_PART_TIME = 1, TOTAL_WORKING_HRS = 100, TOTAL_WORKING_DAYS = 20;
-        int totalEmpWage = 0, empHrs = 0;
+        const int FULL_DAY_HR = 8, PART_DAY_HR = 4, IS_FULL_TIME = 0, IS_PART_TIME = 1;
+        int totalEmpWage = 0, empHrs = 0, wagePerHr, totalWorkingDays, totalWorkingHrs;
+        string comapanyName;
         Random random = new Random();
-        public void EmpAttendance()
+
+        public EmployeeAttendance(String companyNamee, int wagePerHr, int totalWorkingDays, int totalWorkingHrs)
+        {
+            this.comapanyName = companyNamee;
+            this.wagePerHr = wagePerHr;
+            this.totalWorkingDays = totalWorkingDays;
+            this.totalWorkingHrs = totalWorkingHrs;
+        }
+        public void EmpAttendanceAttendance()
         {
 
             int empCheck = random.Next(0, 2);
@@ -25,7 +34,8 @@ namespace EmployeeWageComputation
         public void CalculateEmpWage()
         {
 
-            for (int day = 0; day < TOTAL_WORKING_DAYS && empHrs < TOTAL_WORKING_HRS; day++)
+
+            for (int day = 0; day < totalWorkingDays && empHrs < totalWorkingHrs; day++)
             {
                 int empCheck = random.Next(0, 3);
                 switch (empCheck)
@@ -45,8 +55,8 @@ namespace EmployeeWageComputation
                 }
             }
 
-            int totalEmpWage = empHrs * WAGE_PER_HR;
-            Console.WriteLine(totalEmpWage);
+            int totalEmpWage = empHrs * wagePerHr;
+            Console.WriteLine(comapanyName + "---->" + totalEmpWage);
 
         }
     }
