@@ -16,7 +16,7 @@ namespace EmployeeWageComputation
         public void EmpAttendance()
         {
 
-            int empCheck = random.Next(0, 2); //return 0 or  1
+            int empCheck = random.Next(0, 2);
             if (empCheck == 0)
                 Console.WriteLine("Employee Is Present");
             else
@@ -25,21 +25,9 @@ namespace EmployeeWageComputation
         public void CalculateEmpWage()
         {
 
-            /* if (empCheck == IS_FULL_TIME)
-             {
-                 empHrs = FULL_DAY_HR;
-             }
-
-             if(empCheck == IS_PART_TIME)
-             {
-                 empHrs = PART_DAY_HR;
-             }
-
-             user case 3 is above one is
-            */
             for (int day = 0; day < TOTAL_WORKING_DAYS; day++)
             {
-                int empCheck = random.Next(0, 3);//0 1 2
+                int empCheck = random.Next(0, 3);
                 switch (empCheck)
                 {
                     case IS_FULL_TIME:
