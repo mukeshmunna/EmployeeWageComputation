@@ -1,17 +1,12 @@
-﻿using System;
-    
-namespace EmployeeWageComputation 
-{ 
+﻿using EmployeeWageComputation;
 
-    class Program
+internal class Program
+{
+    private static void Main(string[] args)
     {
-        public static void Main(string[] args)
-        {
-            Console.WriteLine("Employee Wage Computation");
-            EmployeeAttendance wage = new EmployeeAttendance();
-            wage.CalculationEmpWage();
-            
-        }
+        Console.WriteLine("Welcome to Employee Wages");
+        EmployeeAttendance employeeAttendance = new EmployeeAttendance();
+        employeeAttendance.CalculateEmpWage();
 
     }
 }
